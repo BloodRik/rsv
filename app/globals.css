@@ -1,0 +1,138 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+/* @import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities'; */
+
+
+/* @import url(https://db.onlinewebfonts.com/c/535f840c3f8648137acc62e170b62847?family=VTB+Group+Cond+Book); */
+/* @import url(https://db.onlinewebfonts.com/c/535f840c3f8648137acc62e170b62847?family=VTB+Group+Regular+Book); */
+
+/* @font-face {
+  font-family: "VTB Group Cond Book";
+  src: url("https://db.onlinewebfonts.com/t/535f840c3f8648137acc62e170b62847.eot");
+  src: url("https://db.onlinewebfonts.com/t/535f840c3f8648137acc62e170b62847.eot?#iefix")format("embedded-opentype"),
+  url("https://db.onlinewebfonts.com/t/535f840c3f8648137acc62e170b62847.woff2")format("woff2"),
+  url("https://db.onlinewebfonts.com/t/535f840c3f8648137acc62e170b62847.woff")format("woff"),
+  url("https://db.onlinewebfonts.com/t/535f840c3f8648137acc62e170b62847.ttf")format("truetype"),
+  url("https://db.onlinewebfonts.com/t/535f840c3f8648137acc62e170b62847.svg#VTB Group Cond Book")format("svg");
+} */
+
+
+@font-face {
+	font-family: 'VTBGroupUIWebBook';
+	src: url('./VTBGroupUI-Regular/VTBGroupUI-Regular.eot');
+	src:
+	     url('./VTBGroupUI-Regular/VTBGroupUI-Regular.eot?#iefix') format('embedded-opentype'),
+	     url('./VTBGroupUI-Regular/VTBGroupUI-Regular.woff2') format('woff2'),
+	     url('./VTBGroupUI-Regular/VTBGroupUI-Regular.woff') format('woff'),
+	     url('./VTBGroupUI-Regular/VTBGroupUI-Regular.ttf') format('truetype'),
+	     url('./VTBGroupUI-Regular/VTBGroupUI-Regular.svg#VTBGroupUIWeb-Book') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+* {
+  /* font-family: "VTB Group Regular Book"; */
+  font-family: 'VTBGroupUIWebBook';
+}
+
+
+:root {
+  --dark: #333;
+  --light: #E9ECEF;
+}
+
+.switch__input {
+  opacity: 0;
+  z-index: 1;
+}
+
+.switch__label {
+  display: flex;
+  position: relative;
+  width: 67px;
+  height: 34px;
+  background-color: var(--light);
+  border-radius: 25px;
+  transition: 0.4s;
+}
+
+.switch__label::before {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  width: 26px;
+  height: 26px;
+  border-radius: 100%;
+  background-color: #ffffff;
+  color: #ffffff;
+  transition: 0.4s;
+  content: url(./components/Headers/sun.svg);
+  font-family: "Font Awesome 5 Free";
+  font-size: 33px;
+  box-sizing: border-box;
+}
+
+.switch__input:checked + .switch__label {
+  background-color: var(--light);
+}
+
+.switch__input:checked + .switch__label::before {
+  left: calc(100% - 28px);
+  border-color: var(--light);
+  background-color: var(--dark);
+  color: var(--light);
+  border-radius: 100%;
+  content: url(./components/Headers/moon.svg);
+} 
+
+
+.button-container {
+  display: flex;
+  position: relative;
+  top: 100px;
+  right: 550px;
+}
+
+.border-highlight {
+  position: absolute;
+  height: 100%;
+  width: 120px;
+  border: 4px solid transparent;
+  transition: transform 0.4s ease;
+}
+
+.left {
+  transform: translateX(0);
+  border-color: #30498f;
+  z-index: 1;
+}
+
+.right {
+  transform: translateX(100%);
+  border-color: #30498f;
+  right: 80px;
+  width: 80px;
+  z-index: 1;
+}
+
+
+.darkFooter {
+  /* border-color: #ffffff; */
+  width: 25px;
+  height: 25px;
+  background-color: #ffffff;
+  content: url(./components/Headers/moon.svg);
+
+}
+
+.flagFooter {
+  width: 25px;
+  height: 25px;
+  content: url(./components//Footer/flag.svg)
+}
